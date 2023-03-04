@@ -107,7 +107,7 @@ function Page({ challenge_history, challenge_types}) {
             <nav class="relative bg-blue-600 shadow">
                 <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center ">
                     <div class="flex items-center justify-between">
-                        <Link href="/"><Image src="/static/images/logo.png" alt="" width='200' height='20' /></Link>
+                        <Link href="/"><img src="https://github.com/william-index/pkmn-quester/raw/main/public/static/images/logo.png" alt="" width='200' height='20' /></Link>
                     </div>
                     <div  class="flex items-center  w-auto py-4 transition-all duration-300 ease-in-out bg-white bg-transparent mt-0 md:p-0 md:top-0 md:relative md:opacity-100 ">
                         <div class="flex flex-row">
