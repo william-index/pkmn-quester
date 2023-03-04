@@ -126,9 +126,8 @@ function Page({ challenge_history, challenge_types}) {
                         <div class="relative inline-flex items-center mx-auto align-middle">
                             <div class="text-center">
                                 <div class="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">Current Quest</div>
-                                <h1 class="max-w-5xl text-2xl font-bold text-yellow-500 leading-none tracking-tighter md:text-5xl lg:text-6xl lg:max-w-7xl">
-                                    {challenge_history[0].name}
-                                </h1>
+                                <div class="history-title max-w-5xl text-2xl font-bold text-yellow-500 leading-none tracking-tighter md:text-5xl lg:text-6xl lg:max-w-7xl" dangerouslySetInnerHTML={{ __html: challenge_history[0].name }}>
+                                </div>
                                 <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">{renderChallangeTypeDesc(challenge_history[0].quest_type, challenge_types)}</p>
                                 <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6 text-white">
                                     {getStartDate(challenge_history[0].simple_date)} — {getEndDate(challenge_history[0].simple_date)}
@@ -149,11 +148,9 @@ function Page({ challenge_history, challenge_types}) {
 
                             <div key={challenge.id}>
                                 <span class="text-sm text-gray-500">{getStartDate(challenge.simple_date)} — {getEndDate(challenge.simple_date)}</span>
-                                <p class="mt-3 text-lg font-medium leading-6">
-                                    <a href="./blog-post.html" class="text-xl text-gray-800 group-hover:text-gray-500 lg:text-2xl">
-                                        {challenge.name}
-                                    </a>
-                                </p>
+                                <div class="mt-3 text-lg font-medium leading-6">
+                                    <div class="history-title text-xl text-gray-800 lg:text-2xl" dangerouslySetInnerHTML={{ __html: challenge.name }}></div>
+                                </div>
                                 <p class="mt-2 text-lg text-gray-500">{renderChallangeTypeDesc(challenge.quest_type, challenge_types)}</p>
                             </div>
                     ))}

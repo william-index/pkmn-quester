@@ -83,6 +83,11 @@
     height: 1em;
 }
 
+.history-title a {
+    color: blue !important;
+    text-decoration: underline;
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;

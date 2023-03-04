@@ -40,3 +40,13 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+.history-title a {
+    color: rgb(37 99 235);
+    text-decoration: underline;
+}
+
+.history-title a:hover {
+    color: rgb(37 120 235);
+    text-decoration: underline;
+}
