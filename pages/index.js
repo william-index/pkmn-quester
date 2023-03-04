@@ -12,7 +12,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-            <Link href="/leaderboard">Leaderboard?/Link>
+            <Link href="/leaderboard">Leaderboard?</Link>
         </h1>
 
         <p className={styles.description}>
