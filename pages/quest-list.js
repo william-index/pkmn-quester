@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { supabase } from './../lib/supabaseClient';
 import { getChallenge } from './../lib/challengeCreator';
 
+import styles from '../styles/Quest-List.module.css';
+
 
 // @TODO use start_date as an actual column instead of created at
 // @TODO create new challenges which will require some type of auth to push
