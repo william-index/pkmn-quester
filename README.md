@@ -14,4 +14,7 @@ pokemon data: https://www.kaggle.com/datasets/takamasakato/pokemon-all-status-da
 
 query reference https://supabase.com/docs/reference/javascript/lt
 
-tailwind css https://tailwindcss.com/docs/guides/nextjs
+tailwind css https://tailwindcss.com/docs/guides/nextjs https://tailwindcss.com/docs/customizing-colors
+
+https://wickedblocks.dev/
+https://supabase.com/docs/reference/javascript/lt
