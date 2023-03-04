@@ -49,7 +49,7 @@ async function checkChallenges() {
     let mostRecChall = data[0]
     if (shouldCreateChallenge(mostRecChall)) {
         //        let parseDate=new Date(data.created_at)
-        getChallenge(true)
+        getChallenge(mostRecChall.simple_date)
     }
 
     console.log(data)
@@ -65,13 +65,13 @@ function renderChallangeTypeDesc(qtype, typeObj) {
 }
 
 function shouldCreateChallenge(mostRecChall) {
-    let questionDate=new Date(mostRecChall.created_at)
+    let questionDate=new Date(mostRecChall.simple_date)
     var SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
     var ONE_HOUR = 1 * 60 * 60 * 1000;
     var ONE_MIN = 1 * 60 * 1000;
 
     console.log('should create',((new Date) - questionDate),ONE_MIN)
-    if (((new Date) - questionDate) > ONE_MIN) {
+    if (((new Date) - questionDate) > SEVEN_DAYS) {
         return true
     }
 
@@ -131,7 +131,7 @@ function Page({ challenge_history, challenge_types}) {
                                 </h1>
                                 <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">{renderChallangeTypeDesc(challenge_history[0].quest_type, challenge_types)}</p>
                                 <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6 text-white">
-                                    {getStartDate(challenge_history[0].created_at)} — {getEndDate(challenge_history[0].created_at)}
+                                    {getStartDate(challenge_history[0].simple_date)} — {getEndDate(challenge_history[0].simple_date)}
                                 </div>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@ function Page({ challenge_history, challenge_types}) {
                     {challenge_history.slice(1).map((challenge) => (
 
                             <div key={challenge.id}>
-                                <span class="text-sm text-gray-500">{getStartDate(challenge.created_at)} — {getEndDate(challenge.created_at)}</span>
+                                <span class="text-sm text-gray-500">{getStartDate(challenge.simple_date)} — {getEndDate(challenge.simple_date)}</span>
                                 <p class="mt-3 text-lg font-medium leading-6">
                                     <a href="./blog-post.html" class="text-xl text-gray-800 group-hover:text-gray-500 lg:text-2xl">
                                         {challenge.name}

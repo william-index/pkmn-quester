@@ -22,7 +22,7 @@ function Page({ }) {
                     <div class="flex items-center justify-between">
                         <Link href="/"><img src="https://github.com/william-index/pkmn-quester/raw/main/public/static/images/logo.png" alt="" width='200' height='20' /></Link>
                     </div>
-                    <div  class="flex items-center  w-auto py-4 transition-all duration-300 ease-in-out bg-white bg-transparent mt-0 md:p-0 md:top-0 md:relative md:opacity-100 ">
+                    <div  class="flex items-center  w-auto py-4 transition-all duration-300 ease-in-out bg-transparent mt-0 md:p-0 md:top-0 md:relative md:opacity-100 ">
                         <div class="flex flex-row">
                             <Link href="/" class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 mx-2 md:mx-4 md:my-0">Quests</Link>
                             <Link href="/glossary" class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 mx-4 md:my-0">Glossary</Link>
@@ -52,6 +52,17 @@ function Page({ }) {
                             </div>
                             <div class="prose md:flex-grow prose-md">
                                 <p>Hatch means to hatch an egg. How you obtained the egg does not matter.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex flex-wrap py-8 md:flex-nowrap">
+                            <div class="flex flex-col flex-shrink-0 px-4 mb-6 md:w-64 md:mb-0">
+                                <strong class="flex text-3xl font-thin leading-none text-left text-thin lg:text-4xl">Family</strong>
+                            </div>
+                            <div class="prose md:flex-grow prose-md">
+                                <p>A member of a pokemon family is any form of that pokemon, its evolution, or pre-evolutions.</p>
                             </div>
                         </div>
                     </div>
