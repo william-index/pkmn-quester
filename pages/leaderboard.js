@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { supabase } from './../lib/supabaseClient';
+import { getChallenge } from './../lib/challengeCreator';
+
 
 // @TODO use start_date as an actual column instead of created at
 // @TODO create new challenges which will require some type of auth to push
@@ -41,7 +43,7 @@ async function checkChallenges() {
     let mostRecChall = data[0]
     if (shouldCreateChallenge(mostRecChall)) {
         //        let parseDate=new Date(data.created_at)
-        createChallenge()
+        getChallenge(true)
     }
 
     console.log(data)
@@ -51,18 +53,14 @@ function shouldCreateChallenge(mostRecChall) {
     let questionDate=new Date(mostRecChall.created_at)
     var SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
     var ONE_HOUR = 1 * 60 * 60 * 1000;
+    var ONE_MIN = 1 * 60 * 1000;
 
-    if (((new Date) - questionDate) > ONE_HOUR) {
-        console.log('make new')
+    console.log('should create',((new Date) - questionDate),ONE_MIN)
+    if (((new Date) - questionDate) > ONE_MIN) {
+        return true
     }
 
-    return true
-}
-
-async function createChallenge() {
-    console.log('creating a new challenge')
-
-    let { data } = await supabase.from('challenge_templates').select()
+    return false
 }
 
 // -------------------------------------------------- //
