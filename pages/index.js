@@ -140,7 +140,7 @@ function Page({ challenge_history, challenge_types}) {
                     </div>
             </section>
 
-
+            {/* TReecent Quests */}
             <div class="relative bg-white px-6 pt-5  pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
                 <span class="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">Previous Quests</span>
                 <div class="space-y-6 py-8 text-base leading-7 text-gray-600 divide-y divide-gray-300">

@@ -35,31 +35,26 @@ function Page({ }) {
             <section class="relative bg-white px-6 pt-5 sm:mt-10 md:mt-20  pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-5xl sm:rounded-lg sm:px-10">
                 <div class=" flex flex-col items-left px-5 py-8 mx-auto lg:px-24">
                     <div>
-                        <h1 class="max-w-5xl text-2xl font-bold text-blue-500 leading-none tracking-tighter md:text-5xl lg:text-6xl lg:max-w-7xl">
-                            About Pkmn Quester
-                        </h1>
-
-                        <div class="prose md:flex-grow prose-md py-8">
-                            <p>Pokémon is awesome, but once you finish the games and get a living dex its tough what to do next. The Pokemon Company (TPC) releases online events, but for many advanced players those events end up only lasting 20 minutes. Pkmn Quester is designed to give players some extra fun. Every week a new quest is randomly generated for you to focus on completing. Compete with friends, and do whatever is most enjoyable. Happy catching.</p>
-                        </div>
-
-                        <h2 class="max-w-5xl text-1xl font-bold text-yellow-500 leading-none tracking-tighter md:text-3xl lg:text-4xl lg:max-w-5xl">
-                            Do I have to use a specific game?
-                        </h2>
-
-                        <div class="prose md:flex-grow prose-md py-8">
-                            <p>Unless a quest specifies a game, you can do the quest in any one title or across multiple. They don't need to be main franchise titles either. Use Pokemon Go, Pokemon Snap or whatever else you want. This is for you to have fun.</p>
-                        </div>
-
-                        <h2 class="max-w-5xl text-1xl font-bold text-yellow-500 leading-none tracking-tighter md:text-3xl lg:text-4xl lg:max-w-5xl">
-                            By @WilliamAndTech
-                        </h2>
-
-                        <div class="prose md:flex-grow prose-md py-8">
-                            <p>Pkmn Quester was build by William Anderson (Twitter: @WilliamAndTech), just for fun. Its not monetized in any way and is purely a project for people to use to get a bit more play out of all their pokemon games.</p>
+                        <div class="flex flex-wrap py-8 md:flex-nowrap">
+                            <div class="flex flex-col flex-shrink-0 px-4 mb-6 md:w-64 md:mb-0">
+                                <strong class="flex text-3xl font-thin leading-none text-left text-thin lg:text-4xl">Form</strong>
+                            </div>
+                            <div class="prose md:flex-grow prose-md">
+                                <p>Any form of a specific species of an evolution. Gender variations do not count. Shiny versions of pokemon do count as an alternate form. For example Mew, had two possible forms, Mew and a Shiny Mew. Shlowbro has 4 possible forms. Slowbrow, Shiny Slowbro, Galarian Slowbro, Shiny Galarian Slowbro.</p>
+                            </div>
                         </div>
                     </div>
 
+                    <div>
+                        <div class="flex flex-wrap py-8 md:flex-nowrap">
+                            <div class="flex flex-col flex-shrink-0 px-4 mb-6 md:w-64 md:mb-0">
+                                <strong class="flex text-3xl font-thin leading-none text-left text-thin lg:text-4xl">Hatch</strong>
+                            </div>
+                            <div class="prose md:flex-grow prose-md">
+                                <p>Hatch means to hatch an egg. How you obtained the egg does not matter.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </section>
