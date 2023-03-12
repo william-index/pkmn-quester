@@ -45,7 +45,6 @@ async function checkChallenges() {
     console.log('check for challenges')
     let { data } = await supabase.from('challenge_history').select().order('id', { ascending: false }).limit(1)
 
-    console.log('can flagz')
     let mostRecChall = data[0]
     if (shouldCreateChallenge(mostRecChall)) {
         //        let parseDate=new Date(data.created_at)
